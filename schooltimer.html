@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  <div  class="watermarked" data-watermark="Beta Beta">
   <head>
+    
+  
    <!-- <title>School Day Timer</title> -->
     <link rel="icon" href="https://images.vexels.com/media/users/3/132607/isolated/preview/86e952b378eaa8c5ea573fa2bf280d5b-wall-clock-icon-by-vexels.png">
   </head>
- <form id="mainForm" name="mainForm">
+  <form id="mainForm" name="mainForm">
     <div id="dayContainer"><center>
         <p id="schoolScheduleTxt">School<br>Schedule</p>
         <div id="rates">
@@ -40,8 +43,8 @@
     <p id="seventhEndText"><b>Period 7 Ends In:&nbsp</b></p><p id="seventhEnd"></p><br>
     <p id="eighthEndText"><b>Period 8 Ends In:&nbsp</b></p><p id="eighthEnd"></p><br>
     <p id="endText"><b>End of School In:&nbsp</b></p><p id="time"></p><br>
-    <p id="copy">Copyright &copy Luke Gutman, 2019 &nbsp &nbsp &nbsp</p><button onclick="location.href='beta.html';" class="btn-hover color-1">Join The Beta</button>
-  
+    <p id="copy">Copyright &copy Luke Gutman, 2019</p>
+  </div>
 </html>
 
 <script>
@@ -420,13 +423,34 @@ var radVal = 'A';
 </script>
 
 <style>
+.watermarked {
+  position: relative;
+  overflow: hidden;
+}
+
+.watermarked img {
+  width: 100%;
+}
+
+.watermarked::before {
+  position: absolute;
+  top: -75%;
+  left: -75%;
   
-#betaLink {
-  display: inline-block;
-  color: white;
-  font-family: Arial;
-  font-weight: bold;
-  }
+  display: block;
+  width: 150%;
+  height: 150%;
+  
+  transform: rotate(-45deg);
+  content: attr(data-watermark);
+  
+  word-spacing: 30px;
+  opacity: 0.7;
+  line-height: 5em;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
 #schoolScheduleTxt {
   color: white;
   font-family: Arial;
@@ -435,7 +459,7 @@ var radVal = 'A';
   
   }
 #dayContainer {
-  background-color: #2e303a;
+  background-color: #4d515e;
      border-radius: 8px;
    padding: 5px 20px;
     margin: 10px 10px;
@@ -450,7 +474,7 @@ var radVal = 'A';
 
   }
 body {
-  background-color: #1f2026;
+  background-color: #292b32;
   }
 
 #time {
@@ -591,7 +615,6 @@ body {
   font-size: 15px;
   font-family: Arial;
   margin: 0px 0px;
-  display: inline-block;
   }
 .button {
   background-color: #00bfa7;
@@ -662,50 +685,5 @@ body {
 	border-radius: 50%;
 	background: white;
 }
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.buttons {
-    margin: 10%;
-    text-align: center;
-}
-
-.btn-hover {
-    width: 200px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 0px;
-    height: 33px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
-
-    border-radius: 50px;
-    moz-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .1s ease-in-out;
-}
-
-.btn-hover:hover {
-    background-position: 100% 0;
-    moz-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .1s ease-in-out;
-}
-
-.btn-hover:focus {
-    outline: none;
-}
-
-.btn-hover.color-1 {
-    background-image: linear-gradient(to right, #00d8be, #00d8be, #0aaf9c, #00d8be);
-    
-}
+  
 </style>
