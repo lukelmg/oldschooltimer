@@ -1,709 +1,725 @@
 <html>
-  <head>
-    <link rel="icon" href="https://images.vexels.com/media/users/3/132607/isolated/preview/86e952b378eaa8c5ea573fa2bf280d5b-wall-clock-icon-by-vexels.png">
-  </head>
- <form id="mainForm" name="mainForm">
-    <div id="dayContainer"><center>
-        <p id="schoolScheduleTxt">School<br>Schedule</p>
-        <div id="rates">
-         <div class="tooltip">
-           <span class="tooltiptext">Normal</span>
-          <label id="daySelectTxt" class="container">A
-            <input type="radio" name="rads" value="A" id="Acheck" checked="checked">
-            <span class="checkmark"></span>
-          </label>
-          </div> <br>
-          <div class="tooltip">
-            <span class="tooltiptext">Homeroom</span>
-          <label id="daySelectTxt2" class="container">B
-            <input type="radio" name="rads" value="B" id="Bcheck">
-            <span class="checkmark"></span>
-          </label>
-          </div> <br>
-          <div class="tooltip">
-            <span class="tooltiptext">Early Dismissal</span>
-          <label id="daySelectTxt3" class="container">C
-            <input type="radio" name="rads" value="C"  id="Ccheck">
-            <span class="checkmark"></span>
-          </label>
-          </div> <br>
-          <div class="tooltip">
-            <span class="tooltiptext">2 Hour Delay</span>
-          <label id="daySelectTxt4" class="container">D
-            <input type="radio" name="rads" value="D" id="Dcheck">
-            <span class="checkmark"></span>
-          </label>
-          </div>
-           </div>
-        </center>
+   <head>
+      <link rel="icon" href="https://images.vexels.com/media/users/3/132607/isolated/preview/86e952b378eaa8c5ea573fa2bf280d5b-wall-clock-icon-by-vexels.png">
+   </head>
+   <form id="mainForm" name="mainForm">
+      <div id="dayContainer">
+         <center>
+            <p id="schoolScheduleTxt">School<br>Schedule</p>
+            <div id="rates">
+               <div class="tooltip">
+                  <span class="tooltiptext">Normal</span>
+                  <label id="daySelectTxt" class="container">A
+                  <input type="radio" name="rads" value="A" id="Acheck" checked="checked">
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+               <br>
+               <div class="tooltip">
+                  <span class="tooltiptext">Homeroom</span>
+                  <label id="daySelectTxt2" class="container">B
+                  <input type="radio" name="rads" value="B" id="Bcheck">
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+               <br>
+               <div class="tooltip">
+                  <span class="tooltiptext">Early Dismissal</span>
+                  <label id="daySelectTxt3" class="container">C
+                  <input type="radio" name="rads" value="C"  id="Ccheck">
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+               <br>
+               <div class="tooltip">
+                  <span class="tooltiptext">2 Hour Delay</span>
+                  <label id="daySelectTxt4" class="container">D
+                  <input type="radio" name="rads" value="D" id="Dcheck">
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+            </div>
+         </center>
       </div>
-    </form>
-    <span id="result"></span>
-    <p id="firstEndText"><b>Period 1 Ends In:&nbsp</b></p><p id="firstEnd"></p><br>
-    <p id="secondEndText"><b>Period 2 Ends In:&nbsp</b></p><p id="secondEnd"></p><br>
-    <p id="thirdEndText"><b>Period 3 Ends In:&nbsp</b></p><p id="thirdEnd"></p><br>
-    <p id="fourthEndText"><b>Period 4 Ends In:&nbsp</b></p><p id="fourthEnd"></p><br>
-    <p id="fifthEndText"><b>Period 5 Ends In:&nbsp</b></p><p id="fifthEnd"></p><br>
-    <p id="sixthEndText"><b>Period 6 Ends In:&nbsp</b></p><p id="sixthEnd"></p><br>
-    <p id="seventhEndText"><b>Period 7 Ends In:&nbsp</b></p><p id="seventhEnd"></p><br>
-    <p id="eighthEndText"><b>Period 8 Ends In:&nbsp</b></p><p id="eighthEnd"></p><br>
-    <p id="endText"><b>End of School In:&nbsp</b></p><p id="time"></p><br>
-    <p id="copy">Copyright &copy Luke Gutman, 2019 &nbsp &nbsp &nbsp</p><button onclick="location.href='beta.html';" class="btn-hover color-1">Join The Beta</button>
+   </form>
+   <span id="result"></span>
+   <p id="firstEndText"><b>Period 1 Ends In:&nbsp</b></p>
+   <p id="firstEnd"></p>
+   <br>
+   <p id="secondEndText"><b>Period 2 Ends In:&nbsp</b></p>
+   <p id="secondEnd"></p>
+   <br>
+   <p id="thirdEndText"><b>Period 3 Ends In:&nbsp</b></p>
+   <p id="thirdEnd"></p>
+   <br>
+   <p id="fourthEndText"><b>Period 4 Ends In:&nbsp</b></p>
+   <p id="fourthEnd"></p>
+   <br>
+   <p id="fifthEndText"><b>Period 5 Ends In:&nbsp</b></p>
+   <p id="fifthEnd"></p>
+   <br>
+   <p id="sixthEndText"><b>Period 6 Ends In:&nbsp</b></p>
+   <p id="sixthEnd"></p>
+   <br>
+   <p id="seventhEndText"><b>Period 7 Ends In:&nbsp</b></p>
+   <p id="seventhEnd"></p>
+   <br>
+   <p id="eighthEndText"><b>Period 8 Ends In:&nbsp</b></p>
+   <p id="eighthEnd"></p>
+   <br>
+   <p id="endText"><b>End of School In:&nbsp</b></p>
+   <p id="time"></p>
+   <br>
+   <p id="copy">Copyright &copy Luke Gutman, 2019 &nbsp &nbsp &nbsp</p>
+   <button onclick="location.href='beta.html';" class="btn-hover color-1">Join The Beta</button>
 </html>
-
 <script>
-  Array.from(document.querySelectorAll('.watermarked')).forEach(function (el) {
-	el.dataset.watermark = (el.dataset.watermark + ' ').repeat(300);
-});
-
-var h1 = 8;
-var m1 = 29;
-var h2 = 9;
-var m2 = 17;
-var h3 = 10;
-var m3 = 5;
-var h4 = 10;
-var m4 = 53;
-var h5 = 11;
-var m5 = 41;
-var h6 = 12;
-var m6 = 29;
-var h7 = 13;
-var m7 = 17;
-var h8 = 14;
-var m8 = 5;
-var he = 14;
-var me = 53;
-
-var radVal = 'A';
-
-  var seconds;
-  
-document.mainForm.onclick = function () {
-	radVal = document.mainForm.rads.value;
-
-	if (radVal == 'A') {
-		h1 = 8;
-		m1 = 29;
-		h2 = 9;
-		m2 = 17;
-		h3 = 10;
-		m3 = 5;
-		h4 = 10;
-		m4 = 53;
-		h5 = 11;
-		m5 = 41;
-		h6 = 12;
-		m6 = 29;
-		h7 = 13;
-		m7 = 17;
-		h8 = 14;
-		m8 = 5;
-		he = 14;
-		me = 53;
-	}
-	if (radVal == 'B') {
-		h1 = 8;
-		m1 = 37;
-		h2 = 9;
-		m2 = 24;
-		h3 = 10;
-		m3 = 11;
-		h4 = 10;
-		m4 = 58;
-		h5 = 11;
-		m5 = 45;
-		h6 = 12;
-		m6 = 32;
-		h7 = 13;
-		m7 = 19;
-		h8 = 14;
-		m8 = 6;
-		he = 14;
-		me = 53;
-	}
-	if (radVal == 'C') {
-		h1 = 8;
-		m1 = 22;
-		h2 = 9;
-		m2 = 4;
-		h3 = 9;
-		m3 = 46;
-		h4 = 10;
-		m4 = 20;
-		h5 = 10;
-		m5 = 54;
-		h6 = 11;
-		m6 = 28;
-		h7 = 12;
-		m7 = 2;
-		h8 = 12;
-		m8 = 31;
-		he = 13;
-		me = 0;
-	}
-	if (radVal == 'D') {
-		h1 = 10;
-		m1 = 9;
-		h2 = 10;
-		m2 = 39;
-		h3 = 11;
-		m3 = 9;
-		h4 = 11;
-		m4 = 43;
-		h5 = 12;
-		m5 = 17;
-		h6 = 12;
-		m6 = 51;
-		h7 = 13;
-		m7 = 25;
-		h8 = 14;
-		m8 = 9;
-		he = 14;
-		me = 53;
-	}
-}
-
-function checkChecks() {
-	var checks = document.getElementById("checks").value;
-}
-
-(function () {
-	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
-	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-	Date.prototype.getMonthName = function () {
-		return months[this.getMonth()];
-	};
-	Date.prototype.getDayName = function () {
-		return days[this.getDay()];
-	};
-})();
-  
-  
-  function pad(num) {
-    return ("0" + parseInt(num)).substr(-2);
-  }
-
-  function tick1() { //first Period
-   var start = new Date;
-   start.setHours(h1, m1, 0);
-    var now = new Date;
-    if (now > start) {
-      start.setDate(start.getDate() + 1);
-    }
-    var remain = ((start - now) / 1000);
-    var hh = pad((remain / 60 / 60) % 60);
-    var mm = pad((remain / 60) % 60);
-    var ss = pad(remain % 60);
-    seconds = ss;
-    if (hh <= 24 && hh >= 8){
-       document.getElementById('firstEnd').innerHTML = "Period 1 is over!";
-    }
-    else {
-    document.getElementById('firstEnd').innerHTML =
-      hh + ":" + mm + ":" + ss;
-    //setTimeout(tick1, 1000);
-  }}
-  function tick2() { //second Period
-   var start = new Date;
-   start.setHours(h2, m2, 0);
-    var now = new Date;
-    if (now > start) {
-      start.setDate(start.getDate() + 1);
-    }
-    var remain = ((start - now) / 1000);
-    var hh = pad((remain / 60 / 60) % 60);
-    var mm = pad((remain / 60) % 60);
-    //var ss = pad(remain % 60);
-    if (hh <= 24 && hh >= 8){
-       document.getElementById('secondEnd').innerHTML = "Period 2 is over!";
-    }
-    else {
-    document.getElementById('secondEnd').innerHTML =
-      hh + ":" + mm + ":" + seconds;
-    //setTimeout(tick2, 1000);
-  }}
-  function tick3() { //third Period
-   var start = new Date;
-   start.setHours(h3, m3, 0);
-    var now = new Date;
-    if (now > start) {
-      start.setDate(start.getDate() + 1);
-    }
-    var remain = ((start - now) / 1000);
-    var hh = pad((remain / 60 / 60) % 60);
-    var mm = pad((remain / 60) % 60);
-    //var ss = pad(remain % 60);
-    if (hh <= 24 && hh >= 8){
-       document.getElementById('thirdEnd').innerHTML = "Period 3 is over!";
-    }
-    else {
-    document.getElementById('thirdEnd').innerHTML =
-      hh + ":" + mm + ":" + seconds;
-    //setTimeout(tick3, 1000);
-  }}
-  function tick4() { //fourth Period
-   var start = new Date;
-   start.setHours(h4, m4, 0);
-    var now = new Date;
-    if (now > start) {
-      start.setDate(start.getDate() + 1);
-    }
-    var remain = ((start - now) / 1000);
-    var hh = pad((remain / 60 / 60) % 60);
-    var mm = pad((remain / 60) % 60);
-    //var ss = pad(remain % 60);
-    if (hh <= 24 && hh >= 8){
-       document.getElementById('fourthEnd').innerHTML = "Period 4 is over!";
-    }
-    else {
-    document.getElementById('fourthEnd').innerHTML =
-      hh + ":" + mm + ":" + seconds;
-    //setTimeout(tick4, 1000);
-  }}
-  function tick5() { //fourth Period
-   var start = new Date;
-   start.setHours(h5, m5, 0);
-    var now = new Date;
-    if (now > start) {
-      start.setDate(start.getDate() + 1);
-    }
-    var remain = ((start - now) / 1000);
-    var hh = pad((remain / 60 / 60) % 60);
-    var mm = pad((remain / 60) % 60);
-    //var ss = pad(remain % 60);
-    if (hh <= 24 && hh >= 8){
-       document.getElementById('fifthEnd').innerHTML = "Period 5 is over!";
-    }
-    else {
-    document.getElementById('fifthEnd').innerHTML =
-      hh + ":" + mm + ":" + seconds;
-    //setTimeout(tick5, 1000);
-  }}
-  function tick6() { //fourth Period
-   var start = new Date;
-   start.setHours(h6, m6, 0);
-    var now = new Date;
-    if (now > start) {
-      start.setDate(start.getDate() + 1);
-    }
-    var remain = ((start - now) / 1000);
-    var hh = pad((remain / 60 / 60) % 60);
-    var mm = pad((remain / 60) % 60);
-    //var ss = pad(remain % 60);
-    if (hh <= 24 && hh >= 8){
-       document.getElementById('sixthEnd').innerHTML = "Period 6 is over!";
-    }
-    else {
-    document.getElementById('sixthEnd').innerHTML =
-      hh + ":" + mm + ":" + seconds;
-    //setTimeout(tick6, 1000);
-  }}
-  function tick7() { //fourth Period
-   var start = new Date;
-   start.setHours(h7, m7, 0);
-    var now = new Date;
-    if (now > start) {
-      start.setDate(start.getDate() + 1);
-    }
-    var remain = ((start - now) / 1000);
-    var hh = pad((remain / 60 / 60) % 60);
-    var mm = pad((remain / 60) % 60);
-    //var ss = pad(remain % 60);
-    if (hh <= 24 && hh >= 8){
-       document.getElementById('seventhEnd').innerHTML = "Period 7 is over!";
-    }
-    else {
-    document.getElementById('seventhEnd').innerHTML =
-      hh + ":" + mm + ":" + seconds;
-    //setTimeout(tick7, 1000);
-    }}
-  function tick8() { //fourth Period
-   var start = new Date;
-   start.setHours(h8, m8, 0);
-    var now = new Date;
-    if (now > start) {
-      start.setDate(start.getDate() + 1);
-    }
-    var remain = ((start - now) / 1000);
-    var hh = pad((remain / 60 / 60) % 60);
-    var mm = pad((remain / 60) % 60);
-   // var ss = pad(remain % 60);
-    if (hh <= 24 && hh >= 8){
-       document.getElementById('eighthEnd').innerHTML = "Period 8 is over!";
-    }
-    else {
-    document.getElementById('eighthEnd').innerHTML =
-      hh + ":" + mm + ":" + seconds;
-    //setTimeout(tick8, 1000);
-  }}
-  function ticke() { //fourth Period
-   var start = new Date;
-   start.setHours(he, me, 0);
-    var now = new Date;
-    if (now > start) {
-      start.setDate(start.getDate() + 1);
-    }
-    var remain = ((start - now) / 1000);
-    var hh = pad((remain / 60 / 60) % 60);
-    var mm = pad((remain / 60) % 60);
-    //var ss = pad(remain % 60);
-    if (hh <= 24 && hh >= 8){
-       document.getElementById('time').innerHTML = "SCHOOL IS OVER!";
-      document.title = "SCHOOL IS OVER!";
-    }
-    else {
-    document.getElementById('time').innerHTML =
-      hh + ":" + mm + ":" + seconds;
-      document.title = hh + ":" + mm + ":" + seconds;
-    //setTimeout(ticke, 1000);
-  }}
-    
-  function repeat() {
-   tick1();
-   tick2();
-   tick3();
-   tick4();
-   tick5();
-   tick6();
-   tick7();
-   tick8();
-   ticke();
-  
+   Array.from(document.querySelectorAll('.watermarked')).forEach(function (el) {
+   el.dataset.watermark = (el.dataset.watermark + ' ').repeat(300);
+   });
+   
+   var h1 = 8;
+   var m1 = 29;
+   var h2 = 9;
+   var m2 = 17;
+   var h3 = 10;
+   var m3 = 5;
+   var h4 = 10;
+   var m4 = 53;
+   var h5 = 11;
+   var m5 = 41;
+   var h6 = 12;
+   var m6 = 29;
+   var h7 = 13;
+   var m7 = 17;
+   var h8 = 14;
+   var m8 = 5;
+   var he = 14;
+   var me = 53;
+   
+   var radVal = 'A';
+   
+   var seconds;
+   
+   document.mainForm.onclick = function () {
+   radVal = document.mainForm.rads.value;
+   
+   if (radVal == 'A') {
+   h1 = 8;
+   m1 = 29;
+   h2 = 9;
+   m2 = 17;
+   h3 = 10;
+   m3 = 5;
+   h4 = 10;
+   m4 = 53;
+   h5 = 11;
+   m5 = 41;
+   h6 = 12;
+   m6 = 29;
+   h7 = 13;
+   m7 = 17;
+   h8 = 14;
+   m8 = 5;
+   he = 14;
+   me = 53;
+   }
+   if (radVal == 'B') {
+   h1 = 8;
+   m1 = 37;
+   h2 = 9;
+   m2 = 24;
+   h3 = 10;
+   m3 = 11;
+   h4 = 10;
+   m4 = 58;
+   h5 = 11;
+   m5 = 45;
+   h6 = 12;
+   m6 = 32;
+   h7 = 13;
+   m7 = 19;
+   h8 = 14;
+   m8 = 6;
+   he = 14;
+   me = 53;
+   }
+   if (radVal == 'C') {
+   h1 = 8;
+   m1 = 22;
+   h2 = 9;
+   m2 = 4;
+   h3 = 9;
+   m3 = 46;
+   h4 = 10;
+   m4 = 20;
+   h5 = 10;
+   m5 = 54;
+   h6 = 11;
+   m6 = 28;
+   h7 = 12;
+   m7 = 2;
+   h8 = 12;
+   m8 = 31;
+   he = 13;
+   me = 0;
+   }
+   if (radVal == 'D') {
+   h1 = 10;
+   m1 = 9;
+   h2 = 10;
+   m2 = 39;
+   h3 = 11;
+   m3 = 9;
+   h4 = 11;
+   m4 = 43;
+   h5 = 12;
+   m5 = 17;
+   h6 = 12;
+   m6 = 51;
+   h7 = 13;
+   m7 = 25;
+   h8 = 14;
+   m8 = 9;
+   he = 14;
+   me = 53;
+   }
+   }
+   
+   function checkChecks() {
+   var checks = document.getElementById("checks").value;
+   }
+   
+   (function () {
+   var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+   
+   var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+   
+   Date.prototype.getMonthName = function () {
+   return months[this.getMonth()];
+   };
+   Date.prototype.getDayName = function () {
+   return days[this.getDay()];
+   };
+   })();
+   
+   
+   function pad(num) {
+     return ("0" + parseInt(num)).substr(-2);
+   }
+   
+   function tick1() { //first Period
+    var start = new Date;
+    start.setHours(h1, m1, 0);
+     var now = new Date;
+     if (now > start) {
+       start.setDate(start.getDate() + 1);
+     }
+     var remain = ((start - now) / 1000);
+     var hh = pad((remain / 60 / 60) % 60);
+     var mm = pad((remain / 60) % 60);
+     var ss = pad(remain % 60);
+     seconds = ss;
+     if (hh <= 24 && hh >= 8){
+        document.getElementById('firstEnd').innerHTML = "Period 1 is over!";
+     }
+     else {
+     document.getElementById('firstEnd').innerHTML =
+       hh + ":" + mm + ":" + ss;
+     //setTimeout(tick1, 1000);
+   }}
+   function tick2() { //second Period
+    var start = new Date;
+    start.setHours(h2, m2, 0);
+     var now = new Date;
+     if (now > start) {
+       start.setDate(start.getDate() + 1);
+     }
+     var remain = ((start - now) / 1000);
+     var hh = pad((remain / 60 / 60) % 60);
+     var mm = pad((remain / 60) % 60);
+     //var ss = pad(remain % 60);
+     if (hh <= 24 && hh >= 8){
+        document.getElementById('secondEnd').innerHTML = "Period 2 is over!";
+     }
+     else {
+     document.getElementById('secondEnd').innerHTML =
+       hh + ":" + mm + ":" + seconds;
+     //setTimeout(tick2, 1000);
+   }}
+   function tick3() { //third Period
+    var start = new Date;
+    start.setHours(h3, m3, 0);
+     var now = new Date;
+     if (now > start) {
+       start.setDate(start.getDate() + 1);
+     }
+     var remain = ((start - now) / 1000);
+     var hh = pad((remain / 60 / 60) % 60);
+     var mm = pad((remain / 60) % 60);
+     //var ss = pad(remain % 60);
+     if (hh <= 24 && hh >= 8){
+        document.getElementById('thirdEnd').innerHTML = "Period 3 is over!";
+     }
+     else {
+     document.getElementById('thirdEnd').innerHTML =
+       hh + ":" + mm + ":" + seconds;
+     //setTimeout(tick3, 1000);
+   }}
+   function tick4() { //fourth Period
+    var start = new Date;
+    start.setHours(h4, m4, 0);
+     var now = new Date;
+     if (now > start) {
+       start.setDate(start.getDate() + 1);
+     }
+     var remain = ((start - now) / 1000);
+     var hh = pad((remain / 60 / 60) % 60);
+     var mm = pad((remain / 60) % 60);
+     //var ss = pad(remain % 60);
+     if (hh <= 24 && hh >= 8){
+        document.getElementById('fourthEnd').innerHTML = "Period 4 is over!";
+     }
+     else {
+     document.getElementById('fourthEnd').innerHTML =
+       hh + ":" + mm + ":" + seconds;
+     //setTimeout(tick4, 1000);
+   }}
+   function tick5() { //fourth Period
+    var start = new Date;
+    start.setHours(h5, m5, 0);
+     var now = new Date;
+     if (now > start) {
+       start.setDate(start.getDate() + 1);
+     }
+     var remain = ((start - now) / 1000);
+     var hh = pad((remain / 60 / 60) % 60);
+     var mm = pad((remain / 60) % 60);
+     //var ss = pad(remain % 60);
+     if (hh <= 24 && hh >= 8){
+        document.getElementById('fifthEnd').innerHTML = "Period 5 is over!";
+     }
+     else {
+     document.getElementById('fifthEnd').innerHTML =
+       hh + ":" + mm + ":" + seconds;
+     //setTimeout(tick5, 1000);
+   }}
+   function tick6() { //fourth Period
+    var start = new Date;
+    start.setHours(h6, m6, 0);
+     var now = new Date;
+     if (now > start) {
+       start.setDate(start.getDate() + 1);
+     }
+     var remain = ((start - now) / 1000);
+     var hh = pad((remain / 60 / 60) % 60);
+     var mm = pad((remain / 60) % 60);
+     //var ss = pad(remain % 60);
+     if (hh <= 24 && hh >= 8){
+        document.getElementById('sixthEnd').innerHTML = "Period 6 is over!";
+     }
+     else {
+     document.getElementById('sixthEnd').innerHTML =
+       hh + ":" + mm + ":" + seconds;
+     //setTimeout(tick6, 1000);
+   }}
+   function tick7() { //fourth Period
+    var start = new Date;
+    start.setHours(h7, m7, 0);
+     var now = new Date;
+     if (now > start) {
+       start.setDate(start.getDate() + 1);
+     }
+     var remain = ((start - now) / 1000);
+     var hh = pad((remain / 60 / 60) % 60);
+     var mm = pad((remain / 60) % 60);
+     //var ss = pad(remain % 60);
+     if (hh <= 24 && hh >= 8){
+        document.getElementById('seventhEnd').innerHTML = "Period 7 is over!";
+     }
+     else {
+     document.getElementById('seventhEnd').innerHTML =
+       hh + ":" + mm + ":" + seconds;
+     //setTimeout(tick7, 1000);
+     }}
+   function tick8() { //fourth Period
+    var start = new Date;
+    start.setHours(h8, m8, 0);
+     var now = new Date;
+     if (now > start) {
+       start.setDate(start.getDate() + 1);
+     }
+     var remain = ((start - now) / 1000);
+     var hh = pad((remain / 60 / 60) % 60);
+     var mm = pad((remain / 60) % 60);
+    // var ss = pad(remain % 60);
+     if (hh <= 24 && hh >= 8){
+        document.getElementById('eighthEnd').innerHTML = "Period 8 is over!";
+     }
+     else {
+     document.getElementById('eighthEnd').innerHTML =
+       hh + ":" + mm + ":" + seconds;
+     //setTimeout(tick8, 1000);
+   }}
+   function ticke() { //fourth Period
+    var start = new Date;
+    start.setHours(he, me, 0);
+     var now = new Date;
+     if (now > start) {
+       start.setDate(start.getDate() + 1);
+     }
+     var remain = ((start - now) / 1000);
+     var hh = pad((remain / 60 / 60) % 60);
+     var mm = pad((remain / 60) % 60);
+     //var ss = pad(remain % 60);
+     if (hh <= 24 && hh >= 8){
+        document.getElementById('time').innerHTML = "SCHOOL IS OVER!";
+       document.title = "SCHOOL IS OVER!";
+     }
+     else {
+     document.getElementById('time').innerHTML =
+       hh + ":" + mm + ":" + seconds;
+       document.title = hh + ":" + mm + ":" + seconds;
+     //setTimeout(ticke, 1000);
+   }}
      
-  document.addEventListener('DOMContentLoaded', tick1);
-  document.addEventListener('DOMContentLoaded', tick2);
-  document.addEventListener('DOMContentLoaded', tick3);
-  document.addEventListener('DOMContentLoaded', tick4);
-  document.addEventListener('DOMContentLoaded', tick5);
-  document.addEventListener('DOMContentLoaded', tick6);
-  document.addEventListener('DOMContentLoaded', tick7);
-  document.addEventListener('DOMContentLoaded', tick8);
-  document.addEventListener('DOMContentLoaded', ticke);
-
-  setTimeout(repeat, 1000);
-  }
-  
-  repeat();
-  
- 
-
-  
+   function repeat() {
+    tick1();
+    tick2();
+    tick3();
+    tick4();
+    tick5();
+    tick6();
+    tick7();
+    tick8();
+    ticke();
+   
+      
+   document.addEventListener('DOMContentLoaded', tick1);
+   document.addEventListener('DOMContentLoaded', tick2);
+   document.addEventListener('DOMContentLoaded', tick3);
+   document.addEventListener('DOMContentLoaded', tick4);
+   document.addEventListener('DOMContentLoaded', tick5);
+   document.addEventListener('DOMContentLoaded', tick6);
+   document.addEventListener('DOMContentLoaded', tick7);
+   document.addEventListener('DOMContentLoaded', tick8);
+   document.addEventListener('DOMContentLoaded', ticke);
+   
+   setTimeout(repeat, 1000);
+   }
+   
+   repeat();
+   
+   
+   
+   
 </script>
-
 <style>
-.tooltip {
-  position: relative;
-  display: inline-block;
-
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #11c6b1;
-  color: #fff;
-  font-family: Arial;
-  font-weight: Bold;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 5px;
-  margin: 3px 5px;
-  
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: -5px;
-  right: 105%;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-#betaLink {
-  display: inline-block;
-  color: white;
-  font-family: Arial;
-  font-weight: bold;
-  }
-#schoolScheduleTxt {
-  color: white;
-  font-family: Arial;
-  font-weight: bold;
-  font-size: 16px;
-  }
-#dayContainer {
-  background-color: #2e303a;
-  border-radius: 8px;
-  padding: 5px 20px;
-  margin: 10px 10px;
-  float: right;
-  } 
-#daySelectTxt {
-  color: white;
-  font-size: 20px;
-  font-family: Arial;
-  font-weight: bold;
-  }
-#daySelectTxt2 {
-  color: white;
-  font-size: 20px;
-  font-family: Arial;
-  font-weight: bold;
-  }
-#daySelectTxt3 {
-  color: white;
-  font-size: 20px;
-  font-family: Arial;
-  font-weight: bold;
-  }
-#daySelectTxt4 {
-  color: white;
-  font-size: 20px;
-  font-family: Arial;
-  font-weight: bold;
-  }
-body {
-  background-color: #1f2026;
-  }
-#time {
-  color: #14ffe3;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#endText {               /*end */
-  color: #14ffe3;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#firstEnd {               /* first end */
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;  
-  }
-#firstEndText {
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#secondEnd {                /*second end */
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#secondEndText {
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#thirdEnd {               /*third end */
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#thirdEndText { 
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#fourthEnd {               /*fourth end */
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#fourthEndText {
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#fifthEnd {               /*fifth end */
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#fifthEndText {
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#sixthEnd {               /*sixth end */
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#sixthEndText {
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#seventhEnd {               /*seventh end */
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#seventhEndText {
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#eighthEnd {               /*eight end */
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#eighthEndText {
-  color: white;
-  font-size: 50px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display:inline-block;
-  }
-#copy {
-  color: white;
-  font-size: 15px;
-  font-family: Arial;
-  margin: 0px 0px;
-  display: inline-block;
-  }
-.button {
-  background-color: #00bfa7;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
-  font-weight: bold;
-  font-family: Arial;
-  float: right;
-}
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-  background: white;
-}
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-.container input:checked ~ .checkmark {
-  background-color: #11c6b1;
-}
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.container input:checked ~ .checkmark:after {
-  display: block;
-  }
-.container .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.buttons {
-    margin: 10%;
-    text-align: center;
-}
-.btn-hover {
-    width: 200px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 0px;
-    height: 33px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 50px;
-    moz-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .1s ease-in-out;
-}
-.btn-hover:hover {
-    background-position: 100% 0;
-    moz-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .1s ease-in-out;
-  }
-.btn-hover:focus {
-    outline: none;
-}
-.btn-hover.color-1 {
-    background-image: linear-gradient(to right, #00d8be, #00d8be, #0aaf9c, #00d8be);
-}
+   .tooltip {
+   position: relative;
+   display: inline-block;
+   }
+   .tooltip .tooltiptext {
+   visibility: hidden;
+   width: 140px;
+   background-color: #11c6b1;
+   color: #fff;
+   font-family: Arial;
+   font-weight: Bold;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 5px;
+   margin: 3px 5px;
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+   top: -5px;
+   right: 105%;
+   }
+   .tooltip:hover .tooltiptext {
+   visibility: visible;
+   }
+   #betaLink {
+   display: inline-block;
+   color: white;
+   font-family: Arial;
+   font-weight: bold;
+   }
+   #schoolScheduleTxt {
+   color: white;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+   }
+   #dayContainer {
+   background-color: #2e303a;
+   border-radius: 8px;
+   padding: 5px 20px;
+   margin: 10px 10px;
+   float: right;
+   } 
+   #daySelectTxt {
+   color: white;
+   font-size: 20px;
+   font-family: Arial;
+   font-weight: bold;
+   }
+   #daySelectTxt2 {
+   color: white;
+   font-size: 20px;
+   font-family: Arial;
+   font-weight: bold;
+   }
+   #daySelectTxt3 {
+   color: white;
+   font-size: 20px;
+   font-family: Arial;
+   font-weight: bold;
+   }
+   #daySelectTxt4 {
+   color: white;
+   font-size: 20px;
+   font-family: Arial;
+   font-weight: bold;
+   }
+   body {
+   background-color: #1f2026;
+   }
+   #time {
+   color: #14ffe3;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #endText {               /*end */
+   color: #14ffe3;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #firstEnd {               /* first end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;  
+   }
+   #firstEndText {
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #secondEnd {                /*second end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #secondEndText {
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #thirdEnd {               /*third end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #thirdEndText { 
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #fourthEnd {               /*fourth end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #fourthEndText {
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #fifthEnd {               /*fifth end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #fifthEndText {
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #sixthEnd {               /*sixth end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #sixthEndText {
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #seventhEnd {               /*seventh end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #seventhEndText {
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #eighthEnd {               /*eight end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #eighthEndText {
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   }
+   #copy {
+   color: white;
+   font-size: 15px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display: inline-block;
+   }
+   .button {
+   background-color: #00bfa7;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+   border-radius: 8px;
+   font-weight: bold;
+   font-family: Arial;
+   float: right;
+   }
+   .container {
+   display: block;
+   position: relative;
+   padding-left: 35px;
+   margin-bottom: 12px;
+   cursor: pointer;
+   font-size: 22px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   }
+   .container input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+   }
+   .checkmark {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 25px;
+   width: 25px;
+   background-color: #eee;
+   border-radius: 50%;
+   background: white;
+   }
+   .container:hover input ~ .checkmark {
+   background-color: #ccc;
+   }
+   .container input:checked ~ .checkmark {
+   background-color: #11c6b1;
+   }
+   .checkmark:after {
+   content: "";
+   position: absolute;
+   display: none;
+   }
+   .container input:checked ~ .checkmark:after {
+   display: block;
+   }
+   .container .checkmark:after {
+   top: 9px;
+   left: 9px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: white;
+   }
+   * {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   }
+   .buttons {
+   margin: 10%;
+   text-align: center;
+   }
+   .btn-hover {
+   width: 200px;
+   font-size: 16px;
+   font-weight: 600;
+   color: #fff;
+   cursor: pointer;
+   margin: 0px;
+   height: 33px;
+   text-align:center;
+   border: none;
+   background-size: 300% 100%;
+   border-radius: 50px;
+   moz-transition: all .1s ease-in-out;
+   -o-transition: all .1s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .1s ease-in-out;
+   }
+   .btn-hover:hover {
+   background-position: 100% 0;
+   moz-transition: all .1s ease-in-out;
+   -o-transition: all .1s ease-in-out;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .1s ease-in-out;
+   }
+   .btn-hover:focus {
+   outline: none;
+   }
+   .btn-hover.color-1 {
+   background-image: linear-gradient(to right, #00d8be, #00d8be, #0aaf9c, #00d8be);
+   }
 </style>
