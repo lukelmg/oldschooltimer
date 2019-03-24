@@ -6,22 +6,34 @@
     <div id="dayContainer"><center>
         <p id="schoolScheduleTxt">School<br>Schedule</p>
         <div id="rates">
+         <div class="tooltip">
+           <span class="tooltiptext">Normal</span>
           <label id="daySelectTxt" class="container">A
             <input type="radio" name="rads" value="A" id="Acheck" checked="checked">
             <span class="checkmark"></span>
           </label>
+          </div> <br>
+          <div class="tooltip">
+            <span class="tooltiptext">Homeroom</span>
           <label id="daySelectTxt2" class="container">B
             <input type="radio" name="rads" value="B" id="Bcheck">
             <span class="checkmark"></span>
           </label>
+          </div> <br>
+          <div class="tooltip">
+            <span class="tooltiptext">Early Dismissal</span>
           <label id="daySelectTxt3" class="container">C
             <input type="radio" name="rads" value="C"  id="Ccheck">
             <span class="checkmark"></span>
           </label>
+          </div> <br>
+          <div class="tooltip">
+            <span class="tooltiptext">2 Hour Delay</span>
           <label id="daySelectTxt4" class="container">D
             <input type="radio" name="rads" value="D" id="Dcheck">
             <span class="checkmark"></span>
           </label>
+          </div>
            </div>
         </center>
       </div>
@@ -65,6 +77,8 @@ var me = 53;
 
 var radVal = 'A';
 
+  var seconds;
+  
 document.mainForm.onclick = function () {
 	radVal = document.mainForm.rads.value;
 
@@ -166,301 +180,249 @@ function checkChecks() {
 		return days[this.getDay()];
 	};
 })();
-
-var now = new Date();
-
-var day = now.getDayName();
-var month = now.getMonthName();
-
-if (day == 'Saturday' || day == 'Sunday') {
-	window.location.replace('weekend.html');
-} else {
-
-	(function schoolEnd(radVal) {
-
-		function schoolEnd() {
-			function pad(num) {
-				return ("0" + parseInt(num)).substr(-2);
-			}
-			var start = new Date;
-			start.setHours(he, me, 0);
-			var now = new Date;
-			if (now > start) {
-				start.setDate(start.getDate() + 1);
-			}
-			var remain = ((start - now) / 1000);
-			var hh = pad((remain / 60 / 60) % 60);
-			var mm = pad((remain / 60) % 60);
-			var ss = pad(remain % 60);
-			if (hh <= 24 && hh >= 8) {
-				document.getElementById('time').innerHTML = 'SCHOOL IS OVER!'
-			} else {
-				document.getElementById('time').innerHTML = hh + ":" + mm + ":" + ss;
-				document.title = hh + ':' + mm + ':' + ss;
-			}
-			setTimeout(schoolEnd, 1000);
-		}
-
-		document.addEventListener('DOMContentLoaded', schoolEnd);
-
-	})(); //has new version
-
-	(function firstEnd() {
-
-		function schoolEnd() {
-			var start = new Date;
-			start.setHours(h1, m1, 0);
-
-			function pad(num) {
-				return ("0" + parseInt(num)).substr(-2);
-			}
-			var now = new Date;
-			if (now > start) {
-				start.setDate(start.getDate() + 1);
-			}
-			var remain = ((start - now) / 1000);
-			var hh = pad((remain / 60 / 60) % 60);
-			var mm = pad((remain / 60) % 60);
-			var ss = pad(remain % 60);
-			if (hh <= 24 && hh >= 8) {
-				document.getElementById('firstEnd').innerHTML = "Period 1 is over!";
-			} else {
-				document.getElementById('firstEnd').innerHTML =
-					hh + ":" + mm + ":" + ss;
-			}
-			setTimeout(schoolEnd, 1000);
-		} //switched to new version
-
-		document.addEventListener('DOMContentLoaded', schoolEnd);
-
-	})(); //has new version
-
-	(function secondEnd() {
-
-		function schoolEnd() {
-			var start = new Date;
-			start.setHours(h2, m2, 0);
-
-			function pad(num) {
-				return ("0" + parseInt(num)).substr(-2);
-			}
-			var now = new Date;
-			if (now > start) {
-				start.setDate(start.getDate() + 1);
-			}
-			var remain = ((start - now) / 1000);
-			var hh = pad((remain / 60 / 60) % 60);
-			var mm = pad((remain / 60) % 60);
-			var ss = pad(remain % 60);
-			if (hh <= 24 && hh >= 8) {
-				document.getElementById('secondEnd').innerHTML = "Period 2 is over!";
-			} else {
-				document.getElementById('secondEnd').innerHTML =
-					hh + ":" + mm + ":" + ss;
-
-			}
-			setTimeout(schoolEnd, 1000);
-		}
-
-		document.addEventListener('DOMContentLoaded', schoolEnd);
-
-	})(); // has new version
-
-	(function thirdEnd() {
-
-
-		function schoolEnd() {
-			var start = new Date;
-			start.setHours(h3, m3, 0);
-
-			function pad(num) {
-				return ("0" + parseInt(num)).substr(-2);
-			}
-			var now = new Date;
-			if (now > start) {
-				start.setDate(start.getDate() + 1);
-			}
-			var remain = ((start - now) / 1000);
-			var hh = pad((remain / 60 / 60) % 60);
-			var mm = pad((remain / 60) % 60);
-			var ss = pad(remain % 60);
-			if (hh <= 24 && hh >= 8) {
-				document.getElementById('thirdEnd').innerHTML = "Period 3 is over!";
-			} else {
-				document.getElementById('thirdEnd').innerHTML =
-					hh + ":" + mm + ":" + ss;
-
-			}
-			setTimeout(schoolEnd, 1000);
-		}
-
-		document.addEventListener('DOMContentLoaded', schoolEnd);
-
-	})(); //has new version
-
-	(function fourthEnd() {
-
-
-		function schoolEnd() {
-			var start = new Date;
-			start.setHours(h4, m4, 0);
-
-			function pad(num) {
-				return ("0" + parseInt(num)).substr(-2);
-			}
-			var now = new Date;
-			if (now > start) {
-				start.setDate(start.getDate() + 1);
-			}
-			var remain = ((start - now) / 1000);
-			var hh = pad((remain / 60 / 60) % 60);
-			var mm = pad((remain / 60) % 60);
-			var ss = pad(remain % 60);
-			if (hh <= 24 && hh >= 8) {
-				document.getElementById('fourthEnd').innerHTML = "Period 4 is over!";
-			} else {
-				document.getElementById('fourthEnd').innerHTML =
-					hh + ":" + mm + ":" + ss;
-
-			}
-			setTimeout(schoolEnd, 1000);
-		}
-
-		document.addEventListener('DOMContentLoaded', schoolEnd);
-
-	})(); //has new version
-
-	(function fifthEnd() {
-
-
-		function schoolEnd() {
-			var start = new Date;
-			start.setHours(h5, m5, 0);
-
-			function pad(num) {
-				return ("0" + parseInt(num)).substr(-2);
-			}
-			var now = new Date;
-			if (now > start) {
-				start.setDate(start.getDate() + 1);
-			}
-			var remain = ((start - now) / 1000);
-			var hh = pad((remain / 60 / 60) % 60);
-			var mm = pad((remain / 60) % 60);
-			var ss = pad(remain % 60);
-			if (hh <= 24 && hh >= 8) {
-				document.getElementById('fifthEnd').innerHTML = "Period 5 is over!";
-			} else {
-				document.getElementById('fifthEnd').innerHTML =
-					hh + ":" + mm + ":" + ss;
-
-			}
-			setTimeout(schoolEnd, 1000);
-		}
-		document.addEventListener('DOMContentLoaded', schoolEnd);
-
-	})(); // has new version
-
-	(function sixthEnd() {
-
-
-		function schoolEnd() {
-			var start = new Date;
-			start.setHours(h6, m6, 0);
-
-			function pad(num) {
-				return ("0" + parseInt(num)).substr(-2);
-			}
-			var now = new Date;
-			if (now > start) {
-				start.setDate(start.getDate() + 1);
-			}
-			var remain = ((start - now) / 1000);
-			var hh = pad((remain / 60 / 60) % 60);
-			var mm = pad((remain / 60) % 60);
-			var ss = pad(remain % 60);
-			if (hh <= 24 && hh >= 8) {
-				document.getElementById('sixthEnd').innerHTML = "Period 6 is over!";
-			} else {
-				document.getElementById('sixthEnd').innerHTML =
-					hh + ":" + mm + ":" + ss;
-			}
-			setTimeout(schoolEnd, 1000);
-		}
-
-		document.addEventListener('DOMContentLoaded', schoolEnd);
-
-	})(); //has new version
-
-	(function seventhEnd() {
-
-		function schoolEnd() {
-			var start = new Date;
-			start.setHours(h7, m7, 0);
-
-			function pad(num) {
-				return ("0" + parseInt(num)).substr(-2);
-			}
-
-			var now = new Date;
-			if (now > start) {
-				start.setDate(start.getDate() + 1);
-			}
-			var remain = ((start - now) / 1000);
-			var hh = pad((remain / 60 / 60) % 60);
-			var mm = pad((remain / 60) % 60);
-			var ss = pad(remain % 60);
-			if (hh <= 24 && hh >= 8) {
-				document.getElementById('seventhEnd').innerHTML = "Period 7 is over!";
-			} else {
-				document.getElementById('seventhEnd').innerHTML =
-					hh + ":" + mm + ":" + ss;
-			}
-			setTimeout(schoolEnd, 1000);
-		}
-
-		document.addEventListener('DOMContentLoaded', schoolEnd);
-
-	})(); 
-
-	(function eightEnd() {
-
-
-		function schoolEnd() {
-			var start = new Date;
-			start.setHours(h8, m8, 0);
-
-			function pad(num) {
-				return ("0" + parseInt(num)).substr(-2);
-			}
-			var now = new Date;
-			if (now > start) {
-				start.setDate(start.getDate() + 1);
-			}
-			var remain = ((start - now) / 1000);
-			var hh = pad((remain / 60 / 60) % 60);
-			var mm = pad((remain / 60) % 60);
-			var ss = pad(remain % 60);
-			if (hh <= 24 && hh >= 8) {
-				document.getElementById('eighthEnd').innerHTML = "Period 8 is over!";
-			} else {
-				document.getElementById('eighthEnd').innerHTML =
-					hh + ":" + mm + ":" + ss;
-
-			}
-			setTimeout(schoolEnd, 1000);
-		}
-
-		document.addEventListener('DOMContentLoaded', schoolEnd);
-
-	})();
   
+  
+  function pad(num) {
+    return ("0" + parseInt(num)).substr(-2);
   }
+
+  function tick1() { //first Period
+   var start = new Date;
+   start.setHours(h1, m1, 0);
+    var now = new Date;
+    if (now > start) {
+      start.setDate(start.getDate() + 1);
+    }
+    var remain = ((start - now) / 1000);
+    var hh = pad((remain / 60 / 60) % 60);
+    var mm = pad((remain / 60) % 60);
+    var ss = pad(remain % 60);
+    seconds = ss;
+    if (hh <= 24 && hh >= 8){
+       document.getElementById('firstEnd').innerHTML = "Period 1 is over!";
+    }
+    else {
+    document.getElementById('firstEnd').innerHTML =
+      hh + ":" + mm + ":" + ss;
+    //setTimeout(tick1, 1000);
+  }}
+  function tick2() { //second Period
+   var start = new Date;
+   start.setHours(h2, m2, 0);
+    var now = new Date;
+    if (now > start) {
+      start.setDate(start.getDate() + 1);
+    }
+    var remain = ((start - now) / 1000);
+    var hh = pad((remain / 60 / 60) % 60);
+    var mm = pad((remain / 60) % 60);
+    //var ss = pad(remain % 60);
+    if (hh <= 24 && hh >= 8){
+       document.getElementById('secondEnd').innerHTML = "Period 2 is over!";
+    }
+    else {
+    document.getElementById('secondEnd').innerHTML =
+      hh + ":" + mm + ":" + seconds;
+    //setTimeout(tick2, 1000);
+  }}
+  function tick3() { //third Period
+   var start = new Date;
+   start.setHours(h3, m3, 0);
+    var now = new Date;
+    if (now > start) {
+      start.setDate(start.getDate() + 1);
+    }
+    var remain = ((start - now) / 1000);
+    var hh = pad((remain / 60 / 60) % 60);
+    var mm = pad((remain / 60) % 60);
+    //var ss = pad(remain % 60);
+    if (hh <= 24 && hh >= 8){
+       document.getElementById('thirdEnd').innerHTML = "Period 3 is over!";
+    }
+    else {
+    document.getElementById('thirdEnd').innerHTML =
+      hh + ":" + mm + ":" + seconds;
+    //setTimeout(tick3, 1000);
+  }}
+  function tick4() { //fourth Period
+   var start = new Date;
+   start.setHours(h4, m4, 0);
+    var now = new Date;
+    if (now > start) {
+      start.setDate(start.getDate() + 1);
+    }
+    var remain = ((start - now) / 1000);
+    var hh = pad((remain / 60 / 60) % 60);
+    var mm = pad((remain / 60) % 60);
+    //var ss = pad(remain % 60);
+    if (hh <= 24 && hh >= 8){
+       document.getElementById('fourthEnd').innerHTML = "Period 4 is over!";
+    }
+    else {
+    document.getElementById('fourthEnd').innerHTML =
+      hh + ":" + mm + ":" + seconds;
+    //setTimeout(tick4, 1000);
+  }}
+  function tick5() { //fourth Period
+   var start = new Date;
+   start.setHours(h5, m5, 0);
+    var now = new Date;
+    if (now > start) {
+      start.setDate(start.getDate() + 1);
+    }
+    var remain = ((start - now) / 1000);
+    var hh = pad((remain / 60 / 60) % 60);
+    var mm = pad((remain / 60) % 60);
+    //var ss = pad(remain % 60);
+    if (hh <= 24 && hh >= 8){
+       document.getElementById('fifthEnd').innerHTML = "Period 5 is over!";
+    }
+    else {
+    document.getElementById('fifthEnd').innerHTML =
+      hh + ":" + mm + ":" + seconds;
+    //setTimeout(tick5, 1000);
+  }}
+  function tick6() { //fourth Period
+   var start = new Date;
+   start.setHours(h6, m6, 0);
+    var now = new Date;
+    if (now > start) {
+      start.setDate(start.getDate() + 1);
+    }
+    var remain = ((start - now) / 1000);
+    var hh = pad((remain / 60 / 60) % 60);
+    var mm = pad((remain / 60) % 60);
+    //var ss = pad(remain % 60);
+    if (hh <= 24 && hh >= 8){
+       document.getElementById('sixthEnd').innerHTML = "Period 6 is over!";
+    }
+    else {
+    document.getElementById('sixthEnd').innerHTML =
+      hh + ":" + mm + ":" + seconds;
+    //setTimeout(tick6, 1000);
+  }}
+  function tick7() { //fourth Period
+   var start = new Date;
+   start.setHours(h7, m7, 0);
+    var now = new Date;
+    if (now > start) {
+      start.setDate(start.getDate() + 1);
+    }
+    var remain = ((start - now) / 1000);
+    var hh = pad((remain / 60 / 60) % 60);
+    var mm = pad((remain / 60) % 60);
+    //var ss = pad(remain % 60);
+    if (hh <= 24 && hh >= 8){
+       document.getElementById('seventhEnd').innerHTML = "Period 7 is over!";
+    }
+    else {
+    document.getElementById('seventhEnd').innerHTML =
+      hh + ":" + mm + ":" + seconds;
+    //setTimeout(tick7, 1000);
+    }}
+  function tick8() { //fourth Period
+   var start = new Date;
+   start.setHours(h8, m8, 0);
+    var now = new Date;
+    if (now > start) {
+      start.setDate(start.getDate() + 1);
+    }
+    var remain = ((start - now) / 1000);
+    var hh = pad((remain / 60 / 60) % 60);
+    var mm = pad((remain / 60) % 60);
+   // var ss = pad(remain % 60);
+    if (hh <= 24 && hh >= 8){
+       document.getElementById('eighthEnd').innerHTML = "Period 8 is over!";
+    }
+    else {
+    document.getElementById('eighthEnd').innerHTML =
+      hh + ":" + mm + ":" + seconds;
+    //setTimeout(tick8, 1000);
+  }}
+  function ticke() { //fourth Period
+   var start = new Date;
+   start.setHours(he, me, 0);
+    var now = new Date;
+    if (now > start) {
+      start.setDate(start.getDate() + 1);
+    }
+    var remain = ((start - now) / 1000);
+    var hh = pad((remain / 60 / 60) % 60);
+    var mm = pad((remain / 60) % 60);
+    //var ss = pad(remain % 60);
+    if (hh <= 24 && hh >= 8){
+       document.getElementById('time').innerHTML = "SCHOOL IS OVER!";
+      document.title = "SCHOOL IS OVER!";
+    }
+    else {
+    document.getElementById('time').innerHTML =
+      hh + ":" + mm + ":" + seconds;
+      document.title = hh + ":" + mm + ":" + seconds;
+    //setTimeout(ticke, 1000);
+  }}
+    
+  function repeat() {
+   tick1();
+   tick2();
+   tick3();
+   tick4();
+   tick5();
+   tick6();
+   tick7();
+   tick8();
+   ticke();
+  
+     
+  document.addEventListener('DOMContentLoaded', tick1);
+  document.addEventListener('DOMContentLoaded', tick2);
+  document.addEventListener('DOMContentLoaded', tick3);
+  document.addEventListener('DOMContentLoaded', tick4);
+  document.addEventListener('DOMContentLoaded', tick5);
+  document.addEventListener('DOMContentLoaded', tick6);
+  document.addEventListener('DOMContentLoaded', tick7);
+  document.addEventListener('DOMContentLoaded', tick8);
+  document.addEventListener('DOMContentLoaded', ticke);
+
+  setTimeout(repeat, 1000);
+  }
+  
+  repeat();
+  
+ 
+
   
 </script>
 
 <style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #11c6b1;
+  color: #fff;
+  font-family: Arial;
+  font-weight: Bold;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  margin: 3px 5px;
   
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 #betaLink {
   display: inline-block;
   color: white;
@@ -472,7 +434,6 @@ if (day == 'Saturday' || day == 'Sunday') {
   font-family: Arial;
   font-weight: bold;
   font-size: 16px;
-  
   }
 #dayContainer {
   background-color: #2e303a;
@@ -527,8 +488,7 @@ body {
   font-size: 50px;
   font-family: Arial;
   margin: 0px 0px;
-  display:inline-block;
-  
+  display:inline-block;  
   }
 #firstEndText {
   color: white;
@@ -557,7 +517,6 @@ body {
   font-family: Arial;
   margin: 0px 0px;
   display:inline-block;
-  
   }
 #thirdEndText { 
   color: white;
@@ -572,7 +531,6 @@ body {
   font-family: Arial;
   margin: 0px 0px;
   display:inline-block;
-  
   }
 #fourthEndText {
   color: white;
@@ -587,7 +545,6 @@ body {
   font-family: Arial;
   margin: 0px 0px;
   display:inline-block;
-  
   }
 #fifthEndText {
   color: white;
@@ -602,7 +559,6 @@ body {
   font-family: Arial;
   margin: 0px 0px;
   display:inline-block;
-  
   }
 #sixthEndText {
   color: white;
@@ -617,7 +573,6 @@ body {
   font-family: Arial;
   margin: 0px 0px;
   display:inline-block;
-  
   }
 #seventhEndText {
   color: white;
@@ -632,7 +587,6 @@ body {
   font-family: Arial;
   margin: 0px 0px;
   display:inline-block;
-  
   }
 #eighthEndText {
   color: white;
@@ -749,7 +703,6 @@ body {
 .btn-hover:focus {
     outline: none;
 }
-
 .btn-hover.color-1 {
     background-image: linear-gradient(to right, #00d8be, #00d8be, #0aaf9c, #00d8be);
 }
