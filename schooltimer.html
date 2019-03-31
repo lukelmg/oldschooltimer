@@ -44,12 +44,12 @@
                <input id="togglePoint" onclick="checkToggle();" type="checkbox" >
                <span class="slider round"></span>
                </label>
-               <!--<p id="tabTxt">Tab Title</p>
-               <label class="switch">
+               <p id="tabTxt">Tab Title</p>
+                <label class="switch">
                <input id="togglePoint2" onclick="tabSwitch();" type="checkbox" >
-               <span class="slider round"></span>
+               <span class="sliderTab round"></span>
                </label>
-               -->
+               
             </div>
          </center>
       </div>
@@ -198,9 +198,18 @@
 } //toggle for dark/light mode
   function tabSwitch() {
     var checkBox = document.getElementById("togglePoint2");
-    //alert(checkBox);
-} //toggle for tab title
-
+    if (checkBox.checked == true) {
+     
+     tabControl = 'on';
+      //alert(tabControl);
+    }
+    else
+    {
+     
+     tabControl = 'off';
+      // alert(tabControl);
+    }
+} 
 var h1 = 8;  var m1 = 29; //initial variables for A mode
 var h2 = 9;  var m2 = 17;
 var h3 = 10; var m3 = 5;
@@ -211,6 +220,17 @@ var h7 = 13; var m7 = 17;
 var h8 = 14; var m8 = 5;
 var he = 14; var me = 53;
 var radVal = 'A';
+var seconds;
+var tabControl = 'off';
+var timeDetect1;
+var timeDetect2;
+var timeDetect3;
+var timeDetect4;
+var timeDetect5;
+var timeDetect6;
+var timeDetect7;
+var timeDetect8;
+var timeDetecte;
 var seconds;
 
 document.mainForm.onclick = function() { //check schedule radio buttons
@@ -283,9 +303,14 @@ function tick1() { //first Period
     seconds = ss;
     if (hh <= 24 && hh >= 8) {
         document.getElementById('firstEnd').innerHTML = "Period 1 is over!";
+        timeDetect1 = 0;
     } else {
-        document.getElementById('firstEnd').innerHTML =
-            hh + ":" + mm + ":" + ss;
+        document.getElementById('firstEnd').innerHTML = hh + ":" + mm + ":" + ss;
+      timeDetect1 = 1;
+       if (tabControl == 'on') {
+         document.title= hh + ":" + mm + ":" + ss;
+        }
+       
     }
 }//period 1
 function tick2() { //second Period
@@ -300,9 +325,15 @@ function tick2() { //second Period
     var mm = pad((remain / 60) % 60);
     if (hh <= 24 && hh >= 8) {
         document.getElementById('secondEnd').innerHTML = "Period 2 is over!";
+      timeDetect2 = 0;
     } else {
         document.getElementById('secondEnd').innerHTML =
             hh + ":" + mm + ":" + seconds;
+      timeDetect2 = 1;
+        if (tabControl == 'on' && timeDetect1 == 0)
+      {
+        document.title = hh + ":" + mm + ":" + seconds;
+      }
     }
 }//period 2
 function tick3() { //third Period
@@ -317,9 +348,15 @@ function tick3() { //third Period
     var mm = pad((remain / 60) % 60);
     if (hh <= 24 && hh >= 8) {
         document.getElementById('thirdEnd').innerHTML = "Period 3 is over!";
+      timeDetect3 = 0;
     } else {
         document.getElementById('thirdEnd').innerHTML =
             hh + ":" + mm + ":" + seconds;
+      timeDetect3 = 1;
+        if (tabControl == 'on' && timeDetect2 == 0)
+      {
+        document.title = hh + ":" + mm + ":" + seconds;
+      }
     }
 }//period 3
 function tick4() { //fourth Period
@@ -334,9 +371,15 @@ function tick4() { //fourth Period
     var mm = pad((remain / 60) % 60);
     if (hh <= 24 && hh >= 8) {
         document.getElementById('fourthEnd').innerHTML = "Period 4 is over!";
+      timeDetect4 = 0;
     } else {
         document.getElementById('fourthEnd').innerHTML =
             hh + ":" + mm + ":" + seconds;
+      timeDetect4 = 1;
+      if (tabControl == 'on' && timeDetect3 == 0)
+      {
+        document.title = hh + ":" + mm + ":" + seconds;
+      }
     }
 }//period 4
 function tick5() { //fourth Period
@@ -351,9 +394,15 @@ function tick5() { //fourth Period
     var mm = pad((remain / 60) % 60);
     if (hh <= 24 && hh >= 8) {
         document.getElementById('fifthEnd').innerHTML = "Period 5 is over!";
+      timeDetect5 = 0;
     } else {
         document.getElementById('fifthEnd').innerHTML =
             hh + ":" + mm + ":" + seconds;
+      timeDetect5 = 1;
+       if (tabControl == 'on' && timeDetect4 == 0)
+      {
+        document.title = hh + ":" + mm + ":" + seconds;
+      }
     }
 }//period 5
 function tick6() { //fourth Period
@@ -368,10 +417,15 @@ function tick6() { //fourth Period
     var mm = pad((remain / 60) % 60);
     if (hh <= 24 && hh >= 8) {
         document.getElementById('sixthEnd').innerHTML = "Period 6 is over!";
+      timeDetect6 = 0;
     } else {
         document.getElementById('sixthEnd').innerHTML =
             hh + ":" + mm + ":" + seconds;
-        //setTimeout(tick6, 1000);
+       timeDetect6 = 1;
+       if (tabControl == 'on' && timeDetect5 == 0)
+      {
+        document.title = hh + ":" + mm + ":" + seconds;
+      }
     }
 }//period 6
 function tick7() { //fourth Period
@@ -386,9 +440,16 @@ function tick7() { //fourth Period
     var mm = pad((remain / 60) % 60);
     if (hh <= 24 && hh >= 8) {
         document.getElementById('seventhEnd').innerHTML = "Period 7 is over!";
+      timeDetect7 = 0;
     } else {
         document.getElementById('seventhEnd').innerHTML =
             hh + ":" + mm + ":" + seconds;
+      
+      timeDetect7 = 1;
+       if (tabControl == 'on' && timeDetect6 == 0)
+      {
+        document.title = hh + ":" + mm + ":" + seconds;
+      }
     }
 }//period 7
 function tick8() { //fourth Period
@@ -403,9 +464,14 @@ function tick8() { //fourth Period
     var mm = pad((remain / 60) % 60);
     if (hh <= 24 && hh >= 8) {
         document.getElementById('eighthEnd').innerHTML = "Period 8 is over!";
+      timeDetect8 = 0;
     } else {
-        document.getElementById('eighthEnd').innerHTML =
-            hh + ":" + mm + ":" + seconds;
+        document.getElementById('eighthEnd').innerHTML = hh + ":" + mm + ":" + seconds;
+      timeDetect8 = 1;
+       if (tabControl == 'on' && timeDetect7 == 0)
+      {
+        document.title = hh + ":" + mm + ":" + seconds;
+      }
     }
 }//period 8
 function ticke() { //fourth Period
@@ -420,11 +486,24 @@ function ticke() { //fourth Period
     var mm = pad((remain / 60) % 60);
     if (hh <= 24 && hh >= 8) {
         document.getElementById('time').innerHTML = "SCHOOL IS OVER!";
-        document.title = "SCHOOL IS OVER!";
+        if (tabControl == 'off'){
+        document.title = "SCHOOL IS OVER!"; 
+      }
+        //document.title = "SCHOOL IS OVER!";
+      timeDetecte = 0;
     } else {
         document.getElementById('time').innerHTML =
             hh + ":" + mm + ":" + seconds;
+       // document.title = hh + ":" + mm + ":" + seconds;
+      timeDetecte = 1;
+       if (tabControl == 'on' && timeDetect8 == 0)
+      {
         document.title = hh + ":" + mm + ":" + seconds;
+      } 
+          if (tabControl == 'off'){
+        document.title =  hh + ":" + mm + ":" + seconds;
+      }
+
     }
 }//end of day
 
@@ -522,6 +601,57 @@ function repeat() {
   border-radius: 50%;
   display: inline-block;
 }
+  
+  
+  
+  
+  
+   .sliderTab {
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #11c6b1;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+ .sliderTab:before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+ 
+}
+ input:checked + .sliderTab {
+  background-color: #a8a8a8;
+}
+ input:focus + .sliderTab {
+  box-shadow: 0 0 1px #db3d3d;
+}
+ input:checked + .sliderTab:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+ .sliderTab.round {
+  border-radius: 34px;
+  display: inline-block;
+}
+ .sliderTab.round:before {
+  border-radius: 50%;
+  display: inline-block;
+}
+  
    .tooltip {
    position: relative;
    display: inline-block;
@@ -711,3 +841,4 @@ function repeat() {
   }
   
 </style>
+
