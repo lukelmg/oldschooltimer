@@ -1,0 +1,49 @@
+ #time, #endText {
+   color: #14ffe3;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   font-weight: bold;
+   }
+   #firstEnd, #firstEndText{               /* first end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   font-weight: bold;
+   }
+   #secondEnd, #secondEndText, #thirdEndText, #thirdEnd, #fourthEndText, #fourthEnd, #fifthEndText, #fifthEnd, #sixthEnd, #sixthEndText, #seventhEnd, #seventhEndText, #eighthEnd, #eighthEndText {                /*second end */
+   color: white;
+   font-size: 50px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display:inline-block;
+   font-weight: bold;
+   }
+ #endYear {
+  float:right;
+  color:white;
+  font-family: Arial;
+  font-weight: bold;
+  margin: 0px 0px 0px 0px;
+
+  }
+ #endYearTxt {
+  float:right;
+  color:white;
+  font-family: Arial;
+  font-weight: bold;
+  margin: 0px 0px;
+
+  }
+ #title {
+   color: #14ffe3;
+   float:right;
+   font-size: 30px;
+   font-family: Trebuchet MS;
+   font-weight: Bold;
+   margin: 0px 0px;
+   padding: 0px 0px;
+  }
