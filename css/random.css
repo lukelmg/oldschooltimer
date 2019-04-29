@@ -1,0 +1,27 @@
+   body {
+   background-color: #1f2026;
+   }
+   #copy {
+   color: white;
+   font-size: 15px;
+   font-family: Arial;
+   margin: 0px 0px;
+   display: inline-block;
+   }
+  #betaLink {
+   display: inline-block;
+   color: white;
+   font-family: Arial;
+   font-weight: bold;
+   }
+   #secret {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    padding: 32px 32px;
+    margin: 0px 50px;
+    float:right;
+  }  
