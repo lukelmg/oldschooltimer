@@ -159,7 +159,7 @@ function endYear() {
         document.getElementById("time").style.color = "db3d3d";
 
         document.getElementById("dayContainer").style.backgroundColor = "#252C38"; //schedule container
-        document.getElementById("dayContainerKey").style.backgroundColor = "#252C38"; //schedule container
+        //document.getElementById("dayContainerKey").style.backgroundColor = "#252C38"; //schedule container
 
         document.getElementById("schoolScheduleTxt").style.color = "white"; //schedule text
         document.getElementById("keyText").style.color = "white"; //schedule text
@@ -212,7 +212,7 @@ function endYear() {
         document.getElementById("time").style.color = "#0DA895";
 
         document.getElementById("dayContainer").style.backgroundColor = "e2e2e2"; //
-        document.getElementById("dayContainerKey").style.backgroundColor = "e2e2e2"; //
+       // document.getElementById("dayContainerKey").style.backgroundColor = "e2e2e2"; //
 
         document.getElementById("schoolScheduleTxt").style.color = "black";
         document.getElementById("keyText").style.color = "black";
@@ -724,9 +724,10 @@ function ticke() { //fourth Period
     if (hh <= 24 && hh >= 8) {
         document.getElementById('endText').innerHTML = '' ;
         document.getElementById('time').innerHTML = "SCHOOL IS OVER!";
-        if (tabControl == 'off'){
+        
+        
         document.title = "SCHOOL IS OVER!"; 
-      }
+      
 
       timeDetecte = 0;
     } else {
