@@ -1,6 +1,6 @@
 <!-- Hello everyone looking at my code for an unknown reason! If you can find this, consider joining the beta!-->
 <html>
-  <body onload="schooltimer(); checkToggle();"></body>
+  <body onload="schooltimer(); checkToggle();" scroll="no" style="overflow: hidden" </body> 
    <head>
      <link type="image/png" href="https://cdn.glitch.com/390502de-2af3-469c-b617-f038bf730a5f%2FWebp.net-resizeimage.png?1557934464579">
 
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="random.css">
    <form id="mainForm" name="mainForm">
       <link rel="stylesheet" href="selector.css">
-      <div id="dayContainer">
+   <div id="dayContainer">
          <center>
             <p id="schoolScheduleTxt">School<br>Schedule</p>
             <div id="rates">
@@ -84,14 +84,7 @@
                <span class="sliderTab round"></span>
                </label>
               </div>
-           </div>
-         </center>
-      </div>
-     
-        
-     <div id="dayContainerKey">
-         <center>
-            <p id="keyText">Keystone<br>Schedule</p>
+               <p id="keyText">Keystone</p>
             <div class="tooltip">
                   <span class="tooltiptext">Special Keystone Schedule for May 2019</span>
                 <label class="switch">
@@ -99,8 +92,9 @@
                <span class="sliderTab round"></span>
                </label>
               </div>
-       </center>
-     </div>
+           </div>
+         </center>
+      </div>
      
    </form>
    <span id="result"></span>
@@ -128,15 +122,21 @@
    <br>
    <p id="eighthEndText"><b>Period 8 Ends In:&nbsp</b></p>
    <p id="eighthEnd"></p>
+  
    <br>
-   <p id="endText"><b>End of School In:&nbsp</b></p>
-   <p id="time"></p>
-  <div id="yearContainer">
-    <p id="endYearTxt">Time Until End of School Year</p><br>
+    <div id="yearContainer">
+    <p id="endYearTxt">Time Until End of School Year</p>
+    
+    <br>
    <p id="endYear">Calculating...</p>
   </div>
+
+  
+   <p id="endText"><b>End of School In:&nbsp</b></p>
+   <p id="time"></p>
+  
   <br>
-   <p id="copy">Copyright &copy Luke Gutman, 2019</p><p id="title">www.schooltimer.glitch.me</p>
+   <p id="copy">Copyright &copy Luke Gutman, 2019</p>    <p id="title">www.schooltimer.glitch.me</p>
    <button onclick="location.href='https://github.com/lukelmg/schooltimer/issues';" class="betaButton" id="betaButton">Feedback</button>
   <button onclick="lightbox_open();" class="video" id="video" id="vidButton">Promotional Video</button>
   <center>
@@ -150,5 +150,7 @@
 
 <div id="fade" onClick="lightbox_close();"></div>
   </center>
+  
+  
 </html>
 <script src="mainScript.js"></script>
